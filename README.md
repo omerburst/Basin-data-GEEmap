@@ -1,6 +1,6 @@
 # Basin Data Code - Using GEE account
 
-`#ffffff` 
+* (asterisk) 
 
 ## Introduction
 This repository contains a Google Colab notebook designed to facilitate the analysis of drainage basins using geospatial data layers.
