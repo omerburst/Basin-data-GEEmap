@@ -21,7 +21,8 @@ River Order: Displays the hierarchical classification of streams within the basi
 Land Cover: Offers detailed maps of vegetation, urban areas, water bodies, and other land cover types.
 Dams: Highlights the locations of dams, which are critical for water management and flood control.
 Topographic Indices:
-** Height Above Nearest Drainage (HAND): An index that measures the vertical distance between a point in the landscape and the nearest stream, useful for floodplain mapping.
+
+`#000000` Height Above Nearest Drainage (HAND): An index that measures the vertical distance between a point in the landscape and the nearest stream, useful for floodplain mapping.
 Topographic Wetness Index (TWI): An index that helps to identify areas prone to saturation and potential runoff zones.
 Slope: Measures the steepness or incline of the terrain, important for understanding erosion and runoff patterns.
 Topographic Position Index (TPI): Identifies the relative position of a location in the landscape, distinguishing between ridges, valleys, and flat areas.
