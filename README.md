@@ -1,6 +1,5 @@
 # Basin Data Code - Using GEE account
 
-* (asterisk) 
 
 ## Introduction
 This repository contains a Google Colab notebook designed to facilitate the analysis of drainage basins using geospatial data layers.
@@ -16,21 +15,32 @@ Understanding drainage basins is crucial for managing water resources, predictin
 They are fundamental units in hydrology and environmental science.
 
 ### Key Features
+
 The Colab notebook includes a range of data layers that are essential for comprehensive drainage basin analysis:
 
-Groundwater Assessment: Provides information on groundwater levels, quality, and recharge areas.
-River Order: Displays the hierarchical classification of streams within the basin.
-Land Cover: Offers detailed maps of vegetation, urban areas, water bodies, and other land cover types.
-Dams: Highlights the locations of dams, which are critical for water management and flood control.
+* **Groundwater Assessment:** Provides information on groundwater levels, quality, and recharge areas.
+* 
+* **River Order:** Displays the hierarchical classification of streams within the basin.
+* 
+* **Land Cover:** Offers detailed maps of vegetation, urban areas, water bodies, and other land cover types.
+* 
+* **Dams:** Highlights the locations of dams, which are critical for water management and flood control.
 Topographic Indices:
 
-`#000000` Height Above Nearest Drainage (HAND): An index that measures the vertical distance between a point in the landscape and the nearest stream, useful for floodplain mapping.
-Topographic Wetness Index (TWI): An index that helps to identify areas prone to saturation and potential runoff zones.
-Slope: Measures the steepness or incline of the terrain, important for understanding erosion and runoff patterns.
-Topographic Position Index (TPI): Identifies the relative position of a location in the landscape, distinguishing between ridges, valleys, and flat areas.
-Compound Topographic Index (CTI): Also known as the compound topographic wetness index, it combines slope and upstream contributing area to assess wetness potential.
-Stream Power Index (SPI): Quantifies the erosive power of flowing water, based on slope and upstream catchment area.
-Sediment Transport Index (STI): Estimates potential sediment transport capacity, combining slope and contributing area similar to SPI.
+* **Height Above Nearest Drainage (HAND):** An index that measures the vertical distance between a point in the landscape and the nearest stream, useful for floodplain mapping.
+  
+* **Topographic Wetness Index (TWI):** An index that helps to identify areas prone to saturation and potential runoff zones.
+  
+* **Slope:** Measures the steepness or incline of the terrain, important for understanding erosion and runoff patterns.
+  
+* **Topographic Position Index (TPI):** Identifies the relative position of a location in the landscape, distinguishing between ridges, valleys, and flat areas.
+  
+* **Compound Topographic Index (CTI):** Also known as the compound topographic wetness index, it combines slope and upstream contributing area to assess wetness potential.
+  
+* **Stream Power Index (SPI):** Quantifies the erosive power of flowing water, based on slope and upstream catchment area.
+
+* **Sediment Transport Index (STI):** Estimates potential sediment transport capacity, combining slope and contributing area similar to SPI.
+  
 ## 2) Requirenments
 The code is adapted to the Google Colab environment and requires an account in GEE (Google Earth Engine) in order to download the necessary data. A video explaining how to open an account in GEE can be found in the following link: https://www.youtube.com/watch?v=S0AzoP40cDI&t=8s
 
