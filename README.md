@@ -24,7 +24,7 @@ The Colab notebook includes a range of data layers that are essential for compre
   
 * **Dams:** Highlights the locations of dams, which are critical for water management and flood control.
  
-* **Groundwater Assessment:** Provides information on groundwater levels, quality, and recharge areas.
+* **Groundwater Assessment:** Provides information on groundwater levels.
   
 * **Topographic Indices:**
 
@@ -43,60 +43,65 @@ The Colab notebook includes a range of data layers that are essential for compre
   * **Sediment Transport Index (STI):** Estimates potential sediment transport capacity, combining slope and contributing area similar to SPI.
 
 ## How to Use the Notebook
-Visualization: Users can interact with the map interface to explore different layers. Each layer can be toggled on or off to customize the view.
-Download: Users can download selected layers as GeoTIFF files for further analysis in GIS software or other applications
+**1) Visualization:** Users can interact with the map interface to explore different layers. Each layer can be toggled on or off to customize the view.
+
+**2) Download:** Users can download selected layers as GeoTIFF files for further analysis in GIS software or other applications.
   
 ## Requirenments
 The code is adapted to the Google Colab environment and requires an account in GEE (Google Earth Engine) in order to download the necessary data. A video explaining how to open an account in GEE can be found in the following link: https://www.youtube.com/watch?v=S0AzoP40cDI&t=8s
 
 GEE website: https://earthengine.google.com/
 
-## 3) The Code
+## The Code
 
 ### A) Initializing the GEE account
 
-In order to initialize your GEE account, you need to run this cell of the code. Click the link that appears on your screen (Fig 1). After following the instructions and generating a token, you will receive a verification code. Copy and paste the code to the box that reads: " Enter verification code:" and then press Enter (Fig 1).
+In order to initialize your GEE account, you need to run the second cell in the code after you change to your own gee project name.
 
-<img width="602" alt="image" src="https://user-images.githubusercontent.com/95708635/224546720-7338423a-db5d-4abb-8f85-4d86e2ebe7bb.png">
+you can find your project name by entering to gee website, then press your profile - project info and under "Cloud Project:" you will find the name (Fig 1).
 
 Fig 1.
 
-### B) Choosing the river of interest
+<img width="955" alt="gee_project" src="https://github.com/omerburst/Basin-data-GEEmap/assets/95708635/75b407de-e980-4346-8683-8c40cc3f6206">
 
-To run SatVITS-Flood, you need to insert the coordinates of the pixel that represents the river of interest. There are two options for that: 
-**option 1:** If you know the coordinates, insert them directly where it says "option 1" (Fig 2)
 
-<img width="310" alt="image" src="https://user-images.githubusercontent.com/95708635/224547312-95df9614-9ed3-4448-ba14-92e5a5d77ac2.png">
+### B) Choosing the basin of interest
 
-Fig 2.
+First, you need to choose your drainage basin. 
 
-**Option 2:** Using the map.
-If you are not sure of the coordinates, you can first display the precipitation layer to see the hyper-arid regions (yellow regions in Fig 3.A). The NDVI STD (Standart Deviation) around your river can be also displayed. This NDVI STD layer can help you select the pixel of interest (near the river). Notice that greener pixels mean high changes in vegetation, which might be an indication of flood effect (Fig 3.B; see further explanation in Burstein et al., 2023 article: https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2023WR035164). Once you decided which is the pixel that represents your river, use the "draw a marker" option to get its coordinates (Fig 3.B).
+You can easily doing so by "draw a marker" button that appear in the geemap. Put the marker in the polygon of your watershed (Fig 2). 
+
+Fig 2
 
 <img width="491" alt="image" src="https://user-images.githubusercontent.com/95708635/224548590-6c263755-56e9-4fa2-be01-964c8f2d3ce4.png">
 
-Fig 3
 
-In both options, you can add your river_name to save the name on your output CSV file. You can also change the month of the start of the hydrological year (Fig 2). 
+## Output
 
-After inserting the coordinates of the hyper-arid river, run the code and get the flood detection year, as well as the flood magnitude (volume and duration), from SatVITS-Flood.
+In the last cell you could download the layers to your own google drive folder. To do so, insert your desierd folder path, and basin name.
 
-## 4) Output
+## References
 
-The app will automaticaly download a CSV file to your computer. This CSV file will contain information about the year of the flood, its volume and duration (Fig 4). When SatVITS-Flood is unable to estimate the flood's volume or duration, the year of the flood will be the only data displayed.
+Verkaik, J., Hughes J.D., Langevin, C.D., (2021). Parallel MODFLOW 6.2.1 prototype release 0.1 (6.2.1_0.1). Zenodo.
 
-<img width="452" alt="image" src="https://user-images.githubusercontent.com/95708635/224549415-cedc8abb-1436-4bc7-8b9d-96b3dd2cb246.png">
+van Soesbergen, Arnout; Mulligan, Mark; Sáenz, Leonardo (2020): GOODD global dam dataset
+figshare. Dataset. https://doi.org/10.6084/m9.figshare.9747686.v1
 
-Fig 4
+Donchyts, Gennadii, Hessel Winsemius, Jaap Schellekens, Tyler Erickson, Hongkai Gao, Hubert Savenije, and Nick van de Giesen. "Global 30m Height Above the Nearest Drainage (HAND)",
+Geophysical Research Abstracts, Vol. 18, EGU2016-17445-3, 2016, EGU General Assembly (2016).
 
-## 5) Supplements
+Amatulli, Giuseppe, Jaime Garcia Marquez, Tushar Sethi, Jens Kiesel, Afroditi Grigoropoulou, Maria M. Üblacker, Longzhu Q. Shen, and Sami Domisch.
+"Hydrography90m: A new high-resolution global hydrographic dataset." Earth System Science Data 14, no. 10 (2022): 4525-4550.
 
-We add our raw code used to develop this app. The user can use these codes directly to run SatVITS-Flood on his own data.
+Jaafar, H.H., Ahmad, F.A. & El Beyrouthy, N. GCN250, new global gridded curve numbers for hydrologic modeling and design.
+Sci Data 6, 145 (2019). https://doi.org/10.1038/s41597-019-0155-x
 
-Links to the code in GEE for downloading the VIs time series:
+Buchhorn, M. ; Lesiv, M. ; Tsendbazar, N. - E. ; Herold, M. ; Bertels, L. ; Smets, B. Copernicus Global Land Cover Layers-Collection 2. Remote Sensing 2020, 12Volume 108, 1044. doi:10.3390/rs12061044
 
-MODIS: https://code.earthengine.google.com/3061df7bf284f085233d9a5172d25292
 
-Landsat: https://code.earthengine.google.com/8577a70078a5c0d648274ebb551d2f26
 
-AVHRR: https://code.earthengine.google.com/7aaa10e7a7f40fb8e97747fdbb2157fd
+
+
+
+
+
