@@ -73,7 +73,7 @@ You can easily doing so by "draw a marker" button that appear in the geemap. Put
 
 Fig 2
 
-<img width="491" alt="image" src="https://user-images.githubusercontent.com/95708635/224548590-6c263755-56e9-4fa2-be01-964c8f2d3ce4.png">
+<img width="952" alt="mark basin" src="https://github.com/omerburst/Basin-data-GEEmap/assets/95708635/de451d3a-3409-4b64-85f9-79df8f1e575a">
 
 
 ## Output
